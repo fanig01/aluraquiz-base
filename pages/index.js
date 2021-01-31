@@ -40,7 +40,7 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>
-          AluraQuiz -
+          BrasilimpérioQuiz -
           {db.title}
         </title>
       </Head>
@@ -70,7 +70,7 @@ export default function Home() {
               <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
-                placeholder="Diz ai seu nome"
+                placeholder="Diga ai seu nome"
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
@@ -126,7 +126,7 @@ export default function Home() {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
+      <GitHubCorner projectUrl="https://github.com/fanig01" />
     </QuizBackground>
   );
 }
