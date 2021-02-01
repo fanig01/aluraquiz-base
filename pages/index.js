@@ -40,8 +40,8 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>
-          BrasilimpérioQuiz -
-          {db.title}
+          Brasil império Quiz
+          {/* {db.title} */}
         </title>
       </Head>
       <QuizContainer>
@@ -70,7 +70,7 @@ export default function Home() {
               <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
-                placeholder="Diga ai seu nome"
+                placeholder="Diga ai seu nobre nome"
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>

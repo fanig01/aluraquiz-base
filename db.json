@@ -1,49 +1,70 @@
 {
   "bg": "https://i.ytimg.com/vi/xKfbGsydq2Y/maxresdefault.jpg",
-  "title": "Quiz Brasil Imperial #BrasilimperialQuiz",
-  "description": "Um quiz rápido sobre o mundo do JavaScript",
+  "title": "Quiz Brasil Imperial",
+  "description": "Um quiz rápido sobre Brasil império, você realmente sabe sua história?",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-      "title": "Qual a diferença entre = , == e === ?",
+      "image": "https://media.tenor.com/images/8dbdb9bda072d92420968d35c2896684/tenor.gif",
+      "title": "Qual a grande vantagem da república frente ao império do Brasil?",
       "description": "Pergunta fácil em!",
       "answer": 1,
       "alternatives": [
-        "São a mesma coisa",
-        "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+        "São a mesma coisa.",
+        "A bandeira é mais fácil de desenhar.",
+        "Eu coloco quem eu quiser mas não tiro ninguém."
       ]
     },
     {
-      "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
-      "title": "Que tipos de dados são suportados em JavaScript?",
+      "image": "https://media.giphy.com/media/RIw8757sDon8T9lTJK/giphy.gif",
+      "title": "No tempo em que vigorou império brasileiro, como era sua política e economia?",
       "description": "E agora? Você sabe?",
       "answer": 0,
       "alternatives": [
-        "Number, String, Undefined, Null e Bool.",
-        "Int, String, Undefined, Null e Bool."
+        "Era estável e sem rupturas.",
+        "Tinha grandes instabilidades.",
+        "Era regido por esforços externos para atingir a estabilidade.",
+        "Tinha apenas o discurso da mídia da época a seu favor."
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a diferença de window e global?",
-      "answer": 1,
+      "image": "https://media.tenor.com/images/bb92e375007a8f521232d8d4858dba39/tenor.gif",
+      "title": "Quanto tempo de tradição monárquica tem o império do Brasil?",
+      "description": "Você conhece mesmo a história do seu país?",
+      "answer": 3,
       "alternatives": [
-        "São a mesma coisa",
-        "window é o escopo global no browser, e global no node"
+        "50 anos.",
+        "200 anos.",
+        "500 anos.",
+        "700 anos."
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a forma antiga de trabalhar com AJAX na Web?",
+      "image": "https://media.giphy.com/media/W1YWIisoFNO2rIgjWx/giphy.gif",
+      "title": "Em questão de modernidade no império, em que colocação se encontrava o Brasil?",
+      "description": "Será que você chega perto?",
+      "answer": 2,
+      "alternatives": [
+        "Era o 1º país mais moderno do mundo.",
+        "Era o 10º país mais moderno do mundo.",
+        "Era o 5º país mais moderno do mundo.",
+        "Era um dos ultimos países de maior modernidade do mundo."
+      ]
+    },
+    {
+      "image": "https://media.tenor.com/images/a30b99ef684cd5fc57fa992bfefa8111/tenor.gif",
+      "title": "O que o ministro diplomata americano James Watson Webb afirmou sobre o Brasil império?",
+      "description": "Então você conhecia a história do Brasil império mesmo?",
       "answer": 1,
       "alternatives": [
-        "JSONHttpRequest",
-        "XMLHttpRequest",
-        "fetch"
+        "O Brasil é um grande país emergente.",
+        "O Brasil é ao lado de nós mesmos, a grande potência do continente americano.",
+        "O Brasil será o país do futuro, que goza de grandes recursos e será nação pujante.",
+        "Esse é um lar esplêndido, um país em desenvolvimento mas ainda subdesenvolvido."
       ]
     }
   ],
   "external": [
+    "https://lotr-quiz.filipe1309.vercel.app/?name=jopj",
     "https://aluraquiz-css.omariosouto.vercel.app/",
     "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
   ],

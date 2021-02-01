@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
+import { useRouter } from 'next/router';
 // import db from '../../../db.json';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
@@ -12,17 +13,37 @@ import BackLinkArrow from '../../components/BackLinkArrow';
 
 import loadingAnimation from './animations/loading.json';
 
-function ResultWidget({ results }) {
+function ResultWidget({ result }) {
+  const router = useRouter();
+  const nameplayer = router.query.name;
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+      <BackLinkArrow href="/" />
+        {`${nameplayer}, você acertou
+            ${result.filter((currentResult) => currentResult).length}
+          pergunta(s)`}
+        {/* Veja seu Resultado: */}
       </Widget.Header>
 
       <Widget.Content>
-        <p>
+      <table>
+          <tbody>
+            {result.map((r, index) => (
+              <tr key={index}>
+                <td>
+                  {`Pergunta
+                  ${index + 1}
+                  =`}
+                  {r === true ? ' Acertou' : ' Errou'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {/* <p>
           Você acertou
-          {' '}
+          {' '} */}
           {/* {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
@@ -30,7 +51,7 @@ function ResultWidget({ results }) {
             }
             return somatoriaAtual;
           }, 0)} */}
-          {results.filter((x) => x).length}
+          {/* {results.filter((x) => x).length}
           {' '}
           perguntas
         </p>
@@ -46,7 +67,7 @@ function ResultWidget({ results }) {
                 : 'Errou'}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </Widget.Content>
     </Widget>
   );
@@ -63,8 +84,8 @@ function LoadingWidget() {
         <Lottie
           width="200px"
           height="200px"
-          className="lottie-container basic"
-          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+          // className="lottie-container animation"
+          config={{ animationData: loadingAnimation, loop: true, autoplay: true, hideOnTransparent: true }}
         />
       </Widget.Content>
     </Widget>
@@ -167,18 +188,18 @@ const screenStates = {
 };
 export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
-  const [results, setResults] = React.useState([]);
+  const [result, setResult] = React.useState([]);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
   const question = externalQuestions[questionIndex];
   const totalQuestions = externalQuestions.length;
   const bg = externalBg;
 
-  function addResult(result) {
+  function addResult(r) {
     // results.push(result);
-    setResults([
-      ...results,
-      result,
+    setResult([
+      ...result,
+      r,
     ]);
   }
 
@@ -219,7 +240,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && <ResultWidget result={result} />}
       </QuizContainer>
     </QuizBackground>
   );
